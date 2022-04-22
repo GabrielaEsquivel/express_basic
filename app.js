@@ -11,6 +11,9 @@ app.get('/bienvenida', (req, res) => {
     res.send("Bienvenidos a todos! Este es mi primer server")
 });
 
+app.get('/explorers/:explorer', (req, res) => {
+    res.send(req.params)
+});
 app.get('/node', (req, res) => {
     const explorer = {id:1, name:"Explorer 1"}
     const explorer2 = {id:2, name:"Explorer 2"}
